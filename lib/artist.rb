@@ -17,6 +17,9 @@ class Artist
       @genres << song.genre
       song.genre.songs << song
     end
+    if !song.genre.artists.include?(self) then
+      song.genre.artists << self
+    end
   end
 
 end
